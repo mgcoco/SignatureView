@@ -15,7 +15,7 @@ allprojects {
 }
 
 dependencies {
-	implementation 'com.github.mgcoco:SignatureView:v1.0'
+    implementation 'com.github.mgcoco:SignatureView:v1.0.1'
 }
 ```
 
