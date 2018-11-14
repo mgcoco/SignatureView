@@ -1,5 +1,10 @@
 # SignatureView
 
+## Demo
+### Device not support pressure
+
+<img src="https://github.com/mgcoco/SignatureView/blob/master/screenshot/1.jpg" width="250px" />
+
 ## Gradle Dependency
 
 ```
@@ -11,7 +16,7 @@ allprojects {
 }
 
 dependencies {
-	 implementation 'com.github.mgcoco:SignatureView:v1.0'
+	implementation 'com.github.mgcoco:SignatureView:v1.0'
 }
 ```
 
