@@ -130,10 +130,10 @@ public class SignatureView extends View {
         mTouchY = (int)event.getY();
         mTouchP = event.getPressure() * l.get(0).getRange();
 
-        if(mPressurePath)
+        if(!mPressurePath)
             mTouchP = mMaxPressure;
 
-        mTouchP = mThickness + (mThickness * (mTouchP / mMaxPressure));
+        mTouchP = mThickness + (mThickness * (mTouchP * 4 / mMaxPressure));
 
         addStrokePoint(mTouchX, mTouchY, mTouchP);
         draw();
