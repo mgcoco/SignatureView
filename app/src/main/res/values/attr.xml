@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SignatureView">
+        <attr name="msv_pen_color" format="color"/>
+        <attr name="msv_pen_thinkness" format="float"/>
+        <attr name="msv_pen_pressure" format="boolean"/>
+
+    </declare-styleable>
+
+</resources>
