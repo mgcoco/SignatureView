@@ -1,7 +1,6 @@
 # SignatureView
 
-## Demo
-### Device not support pressure
+## Demo on Samsung Tab s4 with sPen
 
 <img src="https://github.com/mgcoco/SignatureView/blob/master/screenshot/1.jpg" width="250px" />
 
@@ -30,8 +29,7 @@ Xml File
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:msv_pen_color="@color/colorAccent
-    app:msv_pen_thinkness="4"
-    app:msv_pen_pressure="true" />
+    app:msv_pen_thinkness="4" />
 ```
 
 Java Code
