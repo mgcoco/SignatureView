@@ -1,32 +1,32 @@
 # SignatureView
 
-##Gradle Dependency
+## Gradle Dependency
 
 ```
-  allprojects {
-      repositories {
-        ...
-        maven { url 'https://jitpack.io' }
-      }
-  }
+allprojects {
+    repositories {
+      ...
+      maven { url 'https://jitpack.io' }
+    }
+}
 
-  dependencies {
-	   implementation 'com.github.mgcoco:SignatureView:v1.0'
-  }
+dependencies {
+	 implementation 'com.github.mgcoco:SignatureView:v1.0'
+}
 ```
 
-##Basic
+## Basic
 
 Xml File
 
 ```
-  <com.mgcoco.signatureview.SignatureView
-      android:id="@+id/signature"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      app:msv_pen_color="@color/colorAccent"
-      app:msv_pen_thinkness="4"
-      app:msv_pen_pressure="true"/>
+<com.mgcoco.signatureview.SignatureView
+    android:id="@+id/signature"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:msv_pen_color="@color/colorAccent
+    app:msv_pen_thinkness="4"
+    app:msv_pen_pressure="true" />
 ```
 
 Java Code
