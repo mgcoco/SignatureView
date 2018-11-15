@@ -42,6 +42,8 @@ public class SignatureView extends View {
 
     private boolean mPressurePath = false;
 
+    private int mMagnification = 20;
+
     public SignatureView(Context context) {
         super(context);
         init(context, null);
@@ -130,10 +132,14 @@ public class SignatureView extends View {
         mTouchY = (int)event.getY();
         mTouchP = event.getPressure() * l.get(0).getRange();
 
-        if(!mPressurePath)
+        if(!mPressurePath){
             mTouchP = mMaxPressure;
+            mTouchP = mThickness + (mThickness * (mTouchP * mMagnification / mMaxPressure));
+        }
+        else {
 
-        mTouchP = mThickness + (mThickness * (mTouchP * 4 / mMaxPressure));
+            mTouchP = mThickness + (mThickness * (mTouchP / mMaxPressure));
+        }
 
         addStrokePoint(mTouchX, mTouchY, mTouchP);
         draw();
@@ -231,6 +237,10 @@ public class SignatureView extends View {
         mStrokeP.add(p0);
         mStrokeC.add(mPenPaint.getColor());
         return;
+    }
+
+    public void setMagnification(int magnification){
+        mMagnification = magnification;
     }
 
     public void setThickness(int level) {
