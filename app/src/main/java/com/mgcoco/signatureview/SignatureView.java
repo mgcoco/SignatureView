@@ -134,11 +134,10 @@ public class SignatureView extends View {
 
         if(!mPressurePath){
             mTouchP = mMaxPressure;
-            mTouchP = mThickness + (mThickness * (mTouchP * mMagnification / mMaxPressure));
+            mTouchP = mThickness + (mThickness * (mTouchP / mMaxPressure));
         }
         else {
-
-            mTouchP = mThickness + (mThickness * (mTouchP / mMaxPressure));
+            mTouchP = mThickness + (mThickness * (mTouchP * mMagnification / mMaxPressure));
         }
 
         addStrokePoint(mTouchX, mTouchY, mTouchP);
