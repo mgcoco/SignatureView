@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -264,5 +265,26 @@ public class SignatureView extends View {
 
     public Bitmap getSignature(){
         return mBitmap;
+    }
+
+    public boolean isSignature() {
+        if(mBitmap == null) {
+            return false;
+        }
+        int width = mBitmap.getWidth();
+        int height = mBitmap.getHeight();
+        int[] pixels = new int[width * height];
+        mBitmap.getPixels(pixels, 0, width, 0, 0, width, height);
+
+        for(int h = 0; h < height; h++){
+            for(int w = 0; w < width; w++){
+                int px = pixels[h * width + w];
+
+                if (px != Color.TRANSPARENT)
+                    return true;
+            }
+        }
+
+        return false;
     }
 }
